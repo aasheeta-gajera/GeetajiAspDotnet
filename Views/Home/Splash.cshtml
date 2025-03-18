@@ -1,0 +1,44 @@
+@{
+    ViewData["Title"] = "Splash Screen";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splash Screen</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.style.opacity = "1"; // Fade in effect
+            setTimeout(function () {
+                document.body.style.opacity = "0"; // Fade out effect
+                setTimeout(() => window.location.href = '@Url.Action("Index", "Home")', 1000);
+            }, 4000);
+        });
+    </script>
+        <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full-screen height */
+            width: 100vw; /* Full-screen width */
+            background-color: #f8f8f8;
+            margin: 0;
+            opacity: 0;
+            transition: opacity 1.5s ease-in-out;
+        }
+        img {
+            width: 60%; /* Adjust width for laptop */
+            max-width: 700px; /* Ensure it doesn’t get too large */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<img src="@Url.Content("~/Assets/Krishna.png")" alt="Splash Image">
+</body>
+</html>

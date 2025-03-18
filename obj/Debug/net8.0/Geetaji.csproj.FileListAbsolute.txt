@@ -1,0 +1,335 @@
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.csproj.AssemblyReference.cache
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.GeneratedMSBuildEditorConfig.editorconfig
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.AssemblyInfoInputs.cache
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.AssemblyInfo.cs
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.csproj.CoreCompileInputs.cache
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.MvcApplicationPartsAssemblyInfo.cache
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.RazorAssemblyInfo.cache
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.RazorAssemblyInfo.cs
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\appsettings.Development.json
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\appsettings.json
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Geetaji.staticwebassets.runtime.json
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Geetaji.exe
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Geetaji.deps.json
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Geetaji.runtimeconfig.json
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Geetaji.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Geetaji.pdb
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Azure.Core.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Azure.Identity.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Humanizer.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.ClientModel.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.CodeDom.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Formats.Asn1.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Memory.Data.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Text.Json.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\Apd dotNet core\Geetaji\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets.build.json
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets.development.json
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets\msbuild.Geetaji.Microsoft.AspNetCore.StaticWebAssets.props
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets\msbuild.build.Geetaji.props
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Geetaji.props
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Geetaji.props
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\staticwebassets.pack.json
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\scopedcss\bundle\Geetaji.styles.css
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\scopedcss\projectbundle\Geetaji.bundle.scp.css
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.csproj.Up2Date
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.dll
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\refint\Geetaji.dll
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.pdb
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\Geetaji.genruntimeconfig.cache
+D:\Apd dotNet core\Geetaji\obj\Debug\net8.0\ref\Geetaji.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\appsettings.Development.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\appsettings.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Geetaji.staticwebassets.runtime.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Geetaji.exe
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Geetaji.deps.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Geetaji.runtimeconfig.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Geetaji.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Geetaji.pdb
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Azure.Core.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Azure.Identity.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Humanizer.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Build.Locator.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.CodeAnalysis.Workspaces.MSBuild.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Data.SqlClient.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Caching.Abstractions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Abstractions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Extensions.Primitives.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Identity.Client.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.SqlServer.Server.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Microsoft.Win32.SystemEvents.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Mono.TextTemplating.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.ClientModel.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.CodeDom.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Composition.AttributedModel.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Composition.Convention.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Composition.Hosting.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Composition.Runtime.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Composition.TypedParts.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Configuration.ConfigurationManager.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Drawing.Common.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Formats.Asn1.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.IO.Pipelines.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Memory.Data.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Runtime.Caching.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Security.Permissions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Text.Encodings.Web.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Text.Json.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Windows.Extensions.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\es\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\fr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\it\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ja\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ko\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pl\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\pt-BR\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\ru\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.BuildHost.resources.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\unix\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Data.SqlClient.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\unix\lib\net6.0\System.Drawing.Common.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\browser\lib\net8.0\System.Text.Encodings.Web.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.csproj.AssemblyReference.cache
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.GeneratedMSBuildEditorConfig.editorconfig
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.AssemblyInfoInputs.cache
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.AssemblyInfo.cs
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.csproj.CoreCompileInputs.cache
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.MvcApplicationPartsAssemblyInfo.cache
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.RazorAssemblyInfo.cache
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.RazorAssemblyInfo.cs
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.sourcelink.json
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets.build.json
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets.development.json
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets\msbuild.Geetaji.Microsoft.AspNetCore.StaticWebAssets.props
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets\msbuild.build.Geetaji.props
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.Geetaji.props
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.Geetaji.props
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\staticwebassets.pack.json
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\scopedcss\bundle\Geetaji.styles.css
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.csproj.Up2Date
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.dll
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\refint\Geetaji.dll
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.pdb
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.genruntimeconfig.cache
+D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\ref\Geetaji.dll
