@@ -3,5 +3,35 @@
 <h2>Shloka Details</h2>
 
 <p><strong>Sanskrit:</strong> @Model.Sanskrit</p>
-<p><strong>Hindi:</strong> @Model.Hindi</p>
+<p><strong>Hindi:</strong> <span id="hindiText">@Model.Hindi</span></p>
 <p><strong>Gujarati:</strong> @Model.Gujrati</p>
+
+<button id="micButton">🎤 Speak</button>
+
+<script>
+    let isSpeaking = false;
+    let speechSynthesisUtterance = new SpeechSynthesisUtterance();
+    
+    function setVoice() {
+        let voices = speechSynthesis.getVoices();
+        speechSynthesisUtterance.voice = voices.find(voice => voice.lang.includes("hi")) || voices[0];
+    }
+
+    setTimeout(setVoice, 500); // Ensure voices are loaded
+
+    document.getElementById("micButton").addEventListener("click", function () {
+        const text = document.getElementById("hindiText").innerText;
+
+        if (!isSpeaking) {
+            speechSynthesisUtterance.text = text;
+            speechSynthesisUtterance.lang = "hi-IN"; 
+            speechSynthesis.speak(speechSynthesisUtterance);
+            isSpeaking = true;
+            this.innerText = "🛑 Stop";
+        } else {
+            speechSynthesis.cancel();
+            isSpeaking = false;
+            this.innerText = "🎤 Speak";
+        }
+    });
+</script>

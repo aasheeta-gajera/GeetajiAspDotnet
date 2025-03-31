@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.IO;
@@ -12,16 +13,21 @@ public class HomeController : Controller
         return JsonConvert.DeserializeObject<List<Language>>(jsonData);
     }
 
-    public IActionResult Index()
-    
+    public IActionResult SplashScreen()
     {
-
+        // Show splash screen only if session variable is not set
         if (HttpContext.Session.GetString("SplashShown") == null)
         {
             HttpContext.Session.SetString("SplashShown", "true"); // Set session flag
-            return View("SplashScreen"); // Show splash screen once
+            return View();
         }
 
+        // If session is already set, redirect directly to Index
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult Index()
+    {
         List<Language> languages = LoadJsonData();
         return View(languages);
     }
@@ -53,15 +59,17 @@ public class HomeController : Controller
     }
 
     public IActionResult ShlokaDetails(int id)
-{
-    var languages = LoadJsonData(); // Load full JSON data
-    var selectedLanguage = languages.FirstOrDefault(lang => lang.Id == id);
-
-    if (selectedLanguage != null && selectedLanguage.Data != null)
     {
-        return View(selectedLanguage.Data); // Pass the list of shlokas
+        var languages = LoadJsonData();
+        var selectedLanguage = languages.FirstOrDefault(lang => lang.Id == id);
+
+        if (selectedLanguage != null && selectedLanguage.Data != null)
+        {
+            return View(selectedLanguage.Data);
+        }
+
+        return NotFound();
     }
-    
-    return NotFound();
-}
+
+
 }

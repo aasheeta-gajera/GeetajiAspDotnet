@@ -5,8 +5,19 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSession(); // Enable session
-builder.Services.AddDistributedMemoryCache();
+
+builder.Services.AddControllersWithViews();
+
+// Add session services
+builder.Services.AddSession(options =>
+{
+    options.IdleTimeout = TimeSpan.FromMinutes(30); // Keep session for 30 minutes
+    options.Cookie.HttpOnly = true; // Security best practice
+    options.Cookie.IsEssential = true; // Ensure session persists
+});
+
+builder.Services.AddDistributedMemoryCache(); // Required for session storage
+
 // builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -24,11 +35,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-app.UseSession();
+app.UseSession(); // Ensure session middleware is applied
 app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=SplashScreen}/{id?}");
 
 app.Run();

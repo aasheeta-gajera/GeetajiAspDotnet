@@ -19,48 +19,60 @@
 </div>
 
 <!-- List Section -->
-<div class="container mt-4">
     <h2 class="text-center">भगवद गीता</h2>
 
-    <div class="list-group" id="shloka-list"></div>
-</div>
+    @model List<Language>
 
-@model List<Language>
+    @foreach (var lang in Model)
+    {
+        <div class="custom-container" onclick="window.location.href='@Url.Action("ShowNames", "Home", new { index = Model.IndexOf(lang) })'">
+            <div class="count-section">
+                @lang.Number1
+            </div>
+            <div class="list-section">
+                @lang.Name1
+            </div>
+        </div>
+    }
 
-@foreach (var lang in Model)
-{
-    <div class="list-group-item custom-container d-flex" onclick="window.location.href='@Url.Action("ShowNames", "Home", new { index = Model.IndexOf(lang) })'">
-       <div class="count-section text-center flex-fill p-2">@lang.Name1</div>
-        <div class="list-section text-center flex-fill p-2">@lang.Number1</div>
-    
-    </div>
-}
 
+<!-- Styles -->
 <style>
    .custom-container {
-    display: flex;
-    border: 3px solid #FF8C00;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    overflow: hidden;
-}
+        display: flex;
+        border: 3px solid #FF8C00;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        overflow: hidden;
+        cursor: pointer; /* Make it clear it's clickable */
+        transition: transform 0.2s ease-in-out; /* Smooth effect on hover */
+   }
 
-/* Reduce the width of the count section (white) */
-.count-section {
-    background-color: white;
-    font-size: 18px;
-    font-weight: bold;
-    flex: 0.2; /* Reduced to 20% */
-    padding: 10px;
-}
+   .custom-container:hover {
+        transform: scale(1.03); /* Slight zoom effect */
+   }
 
-/* Increase the width of the list section (orange) */
-.list-section {
-    background-color: #FF8C00;
-    color: white;
-    font-weight: bold;
-    flex: 0.8; /* Increased to 80% */
-    padding: 15px; /* Added more padding for better visibility */
-}
+   /* Count section (smaller, white) */
+   .count-section {
+        background-color: white;
+        font-size: 18px;
+        font-weight: bold;
+        flex: 0.2; /* 20% width */
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-right: 3px solid #FF8C00;
+   }
 
+   /* List section (larger, orange) */
+   .list-section {
+        background-color: #FF8C00;
+        color: white;
+        font-weight: bold;
+        flex: 0.8; /* 80% width */
+        padding: 15px;
+        display: flex;
+        align-items: center;
+   }
 </style>
