@@ -1,31 +1,67 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Geetaji.Models;
-
-namespace Geetaji.Controllers;
+using System.Collections.Generic;
+using System.IO;
+using Newtonsoft.Json;
 
 public class HomeController : Controller
 {
-    private readonly ILogger<HomeController> _logger;
-
-    public HomeController(ILogger<HomeController> logger)
+    private List<Language> LoadJsonData()
     {
-        _logger = logger;
+        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "languages.json");
+        string jsonData = System.IO.File.ReadAllText(filePath);
+        return JsonConvert.DeserializeObject<List<Language>>(jsonData);
     }
 
     public IActionResult Index()
+    
     {
-        return View();
+
+        if (HttpContext.Session.GetString("SplashShown") == null)
+        {
+            HttpContext.Session.SetString("SplashShown", "true"); // Set session flag
+            return View("SplashScreen"); // Show splash screen once
+        }
+
+        List<Language> languages = LoadJsonData();
+        return View(languages);
     }
 
-    public IActionResult Privacy()
+    public IActionResult ShowNames(int index)
     {
-        return View();
+        List<Language> languages = LoadJsonData();
+        if (index < languages.Count)
+        {
+            return View(languages[index].Data);
+        }
+        return RedirectToAction("Index");
     }
 
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
+    public IActionResult ShowShloka(int id)
     {
-        return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        List<Language> languages = LoadJsonData();
+        foreach (var lang in languages)
+        {
+            foreach (var item in lang.Data ?? new List<Language>())
+            {
+                if (item.Id == id)
+                {
+                    return View(item);
+                }
+            }
+        }
+        return RedirectToAction("Index");
     }
+
+    public IActionResult ShlokaDetails(int id)
+{
+    var languages = LoadJsonData(); // Load full JSON data
+    var selectedLanguage = languages.FirstOrDefault(lang => lang.Id == id);
+
+    if (selectedLanguage != null && selectedLanguage.Data != null)
+    {
+        return View(selectedLanguage.Data); // Pass the list of shlokas
+    }
+    
+    return NotFound();
+}
 }

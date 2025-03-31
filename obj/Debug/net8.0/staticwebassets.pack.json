@@ -1,24 +1,16 @@
 {
   "Files": [
     {
-      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\KrishnaArjuna.jpg",
-      "PackagePath": "staticwebassets\\Assets\\KrishnaArjuna.jpg"
-    },
-    {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\image.png",
       "PackagePath": "staticwebassets\\Assets\\image.png"
     },
     {
-      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\k1.jpeg",
-      "PackagePath": "staticwebassets\\Assets\\k1.jpeg"
-    },
-    {
-      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\k2.jpg",
-      "PackagePath": "staticwebassets\\Assets\\k2.jpg"
-    },
-    {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\krishna.png",
       "PackagePath": "staticwebassets\\Assets\\krishna.png"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\languages.json",
+      "PackagePath": "staticwebassets\\Data\\languages.json"
     },
     {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\css\\site.css",

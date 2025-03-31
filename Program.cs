@@ -5,6 +5,8 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSession(); // Enable session
+builder.Services.AddDistributedMemoryCache();
 // builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
@@ -22,7 +24,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
 
 app.MapControllerRoute(

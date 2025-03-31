@@ -333,3 +333,4 @@ D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\refint\Geetaji.dll
 D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.pdb
 D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\Geetaji.genruntimeconfig.cache
 D:\GIT\GeetajiAspDotnet\obj\Debug\net8.0\ref\Geetaji.dll
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Newtonsoft.Json.dll

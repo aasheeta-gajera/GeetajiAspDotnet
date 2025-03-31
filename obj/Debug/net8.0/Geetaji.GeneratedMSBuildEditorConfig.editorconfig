@@ -38,8 +38,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/GIT/GeetajiAspDotnet/Views/Home/Splash.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcGxhc2guY3NodG1s
+[D:/GIT/GeetajiAspDotnet/Views/Home/ShowNames.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93TmFtZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GIT/GeetajiAspDotnet/Views/Home/ShowShloka.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93U2hsb2thLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/GIT/GeetajiAspDotnet/Views/Home/SplashScreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcGxhc2hTY3JlZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GIT/GeetajiAspDotnet/Views/Shared/Error.cshtml]

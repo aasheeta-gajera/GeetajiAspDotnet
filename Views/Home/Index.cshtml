@@ -25,24 +25,16 @@
     <div class="list-group" id="shloka-list"></div>
 </div>
 
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        fetch("/api/Shloka")
-            .then(response => response.json())
-            .then(data => {
-                const listContainer = document.getElementById("shloka-list");
-                data.forEach(shloka => {
-                    let shlokaItem = `
-                        <div class="list-group-item custom-container d-flex">
-                            <div class="count-section text-center flex-fill p-2">${shloka.id}</div>
-                            <div class="list-section text-center flex-fill p-2">${shloka.shlokaText}</div>
-                        </div>
-                    `;
-                    listContainer.innerHTML += shlokaItem;
-                });
-            });
-    });
-</script>
+@model List<Language>
+
+@foreach (var lang in Model)
+{
+    <div class="list-group-item custom-container d-flex" onclick="window.location.href='@Url.Action("ShowNames", "Home", new { index = Model.IndexOf(lang) })'">
+       <div class="count-section text-center flex-fill p-2">@lang.Name1</div>
+        <div class="list-section text-center flex-fill p-2">@lang.Number1</div>
+    
+    </div>
+}
 
 <style>
    .custom-container {

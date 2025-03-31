@@ -1,0 +1,20 @@
+@model List<Language>
+
+<h2>Select a Shloka</h2>
+
+@foreach (var item in Model)
+{
+    <div class="shloka-container" onclick="window.location.href='@Url.Action("ShowShloka", "Home", new { id = item.Id })'">
+        <p>@item.Name</p>
+    </div>
+}
+
+<style>
+    .shloka-container {
+        border: 1px solid black;
+        padding: 10px;
+        margin: 10px;
+        cursor: pointer;
+        background-color: lightblue;
+    }
+</style>
