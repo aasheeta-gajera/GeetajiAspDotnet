@@ -1,12 +1,52 @@
 @model Language
 
-<h2>Shloka Details</h2>
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <h2 class="card-title text-center mb-4">Shloka Details</h2>
 
-<p><strong>Sanskrit:</strong> @Model.Sanskrit</p>
-<p><strong>Hindi:</strong> <span id="hindiText">@Model.Hindi</span></p>
-<p><strong>Gujarati:</strong> @Model.Gujrati</p>
+            <div class="shloka-content mb-4">
+                <p class="mb-3"><strong>Sanskrit:</strong> @Model.Sanskrit</p>
+                <p class="mb-3"><strong>Hindi:</strong> <span id="hindiText">@Model.Hindi</span></p>
+                <p class="mb-3"><strong>Gujarati:</strong> @Model.Gujrati</p>
+            </div>
 
-<button id="micButton">🎤 Speak</button>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="navigation-buttons">
+                    @if (ViewBag.PreviousId != -1)
+                    {
+                        <a href="@Url.Action("ShowShloka", new { id = ViewBag.PreviousId })" class="btn btn-warning">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    }
+                </div>
+
+                <div class="voice-button-container">
+                    <button id="micButton" class="btn btn-primary">
+                        <i class="fas fa-microphone"></i> Speak
+                    </button>
+                </div>
+
+                <div class="navigation-buttons">
+                    <span class="mx-2">@(ViewBag.CurrentIndex + 1) of @ViewBag.TotalShlokas</span>
+
+                    @if (ViewBag.NextId != -1)
+                    {
+                        <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" class="btn btn-warning">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    }
+                </div>
+            </div>
+
+            <div class="text-center mt-3">
+                <button id="likeButton" class="btn @(Model.IsLiked ? "btn-danger" : "btn-outline-danger")" onclick="toggleLike(@Model.Id)">
+                    <i class="@(Model.IsLiked ? "fas" : "far") fa-heart"></i> @(Model.IsLiked ? "Liked" : "Like")
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <script>
     let isSpeaking = false;
@@ -27,11 +67,72 @@
             speechSynthesisUtterance.lang = "hi-IN"; 
             speechSynthesis.speak(speechSynthesisUtterance);
             isSpeaking = true;
-            this.innerText = "🛑 Stop";
+            this.innerHTML = '<i class="fas fa-volume-up"></i> Stop';
+            this.classList.remove('btn-primary');
+            this.classList.add('btn-danger');
         } else {
             speechSynthesis.cancel();
             isSpeaking = false;
-            this.innerText = "🎤 Speak";
+            this.innerHTML = '<i class="fas fa-microphone"></i> Speak';
+            this.classList.remove('btn-danger');
+            this.classList.add('btn-primary');
         }
     });
+
+    function toggleLike(shlokaId) {
+        const likeButton = document.getElementById('likeButton');
+        const isLiked = likeButton.classList.contains('btn-danger');
+        
+        fetch('/Home/ToggleLike', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ shlokaId: shlokaId })
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                if (data.isLiked) {
+                    likeButton.classList.remove('btn-outline-danger');
+                    likeButton.classList.add('btn-danger');
+                    likeButton.innerHTML = '<i class="fas fa-heart"></i> Liked';
+                } else {
+                    likeButton.classList.remove('btn-danger');
+                    likeButton.classList.add('btn-outline-danger');
+                    likeButton.innerHTML = '<i class="far fa-heart"></i> Like';
+                }
+            }
+        });
+    }
 </script>
+
+<style>
+    .shloka-content {
+        font-size: 1.1em;
+        line-height: 1.6;
+    }
+    .navigation-buttons {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .voice-button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+    .btn-warning {
+        background-color: #ff9800;
+        border-color: #ff9800;
+        color: white;
+    }
+    .btn-warning:hover {
+        background-color: #f57c00;
+        border-color: #f57c00;
+        color: white;
+    }
+</style>

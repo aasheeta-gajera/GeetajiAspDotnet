@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NbSqht0mJLA/4MNb6f/J8/yGVmHk3JIWDwVAJXiGDhg=",
+  "Hash": "UKRV/1gqdio4eso7vMzGCrswcC+EmRZpnFv6WOJbl5s=",
   "Source": "Geetaji",
   "BasePath": "_content/Geetaji",
   "Mode": "Default",
@@ -34,25 +34,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\image.png"
-    },
-    {
-      "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\krishna.png",
-      "SourceId": "Geetaji",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\",
-      "BasePath": "_content/Geetaji",
-      "RelativePath": "Assets/krishna.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Assets\\krishna.png"
     },
     {
       "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\css\\site.css",

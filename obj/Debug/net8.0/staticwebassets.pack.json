@@ -5,10 +5,6 @@
       "PackagePath": "staticwebassets\\Assets\\image.png"
     },
     {
-      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\krishna.png",
-      "PackagePath": "staticwebassets\\Assets\\krishna.png"
-    },
-    {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\languages.json",
       "PackagePath": "staticwebassets\\Data\\languages.json"
     },

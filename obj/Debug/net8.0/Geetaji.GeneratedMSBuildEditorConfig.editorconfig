@@ -30,6 +30,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFwdGVyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/GIT/GeetajiAspDotnet/Views/Home/Favorites.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxGYXZvcml0ZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/GIT/GeetajiAspDotnet/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -40,10 +44,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/GIT/GeetajiAspDotnet/Views/Home/ShowShloka.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTaG93U2hsb2thLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[D:/GIT/GeetajiAspDotnet/Views/Home/SplashScreen.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTcGxhc2hTY3JlZW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/GIT/GeetajiAspDotnet/Views/Shared/Error.cshtml]

@@ -1,17 +1,44 @@
 @model List<Language>
 
-<h2>Select a Shloka</h2>
+<div class="position-relative text-center">
+    <!-- Top Image -->
+    <img src="~/Assets/image.png" class="img-fluid" style="max-height: 300px; width: auto;" alt="Top Image">
 
+    <!-- Bhagavad Gita Shloka Overlay -->
+    <div class="position-absolute top-50 start-50 translate-middle text-center p-3"
+         style="color: #FF8C00; font-size: 20px; font-weight: bold; line-height: 1.6; border-radius: 10px;">
+        <p class="mb-0">
+            यदा यदा हि धर्मस्य ग्लानिर्भवति भारत। <br>
+            अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥ <br>
+            परित्राणाय साधूनां विनाशाय च दुष्कृताम् <br>
+            धर्मसंस्थापनार्थाय सम्भवामि युगे युगे॥
+        </p>
+    </div>
+</div>
+
+<div class="chapter-info-container">
+    <div class="chapter-info left">
+        <h3 class="mb-0" style="color: #FF8C00;">@ViewBag.ChapterName</h3>
+    </div>
+    <div class="chapter-info right">
+        <h3 class="mb-0" style="color: #FF8C00;">Total Shlokas: @ViewBag.TotalShlokas</h3>
+    </div>
+</div>
+
+@{
+    int counter = 1;
+}
 @foreach (var item in Model)
 {
     <div class="custom-container" onclick="window.location.href='@Url.Action("ShowShloka", "Home", new { id = item.Id })'">
         <div class="count-section">
-            @item.Id
+            @counter
         </div>
         <div class="list-section">
             @item.Name
         </div>
     </div>
+    counter++;
 }
 
 <style>
@@ -51,5 +78,22 @@
         padding: 15px;
         display: flex;
         align-items: center;
+   }
+
+   .chapter-info-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        padding: 0 15px;
+   }
+
+   .chapter-info {
+        flex: 1;
+        text-align: center;
+   }
+
+   .chapter-info h3 {
+        font-size: 1.2em;
+        font-weight: bold;
    }
 </style>

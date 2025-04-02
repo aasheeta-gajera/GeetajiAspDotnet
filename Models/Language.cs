@@ -10,4 +10,5 @@ public class Language
     public string? Hindi { get; set; }
     public string? Name { get; set; }
     public int? Id { get; set; }
+    public bool IsLiked { get; set; }
 }
