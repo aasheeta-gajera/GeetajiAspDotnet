@@ -54,7 +54,14 @@
     
     function setVoice() {
         let voices = speechSynthesis.getVoices();
-        speechSynthesisUtterance.voice = voices.find(voice => voice.lang.includes("hi")) || voices[0];
+        speechSynthesisUtterance.voice =
+        voices.find(voice =>
+            voice.lang === "hi-IN" &&
+            (voice.name.includes("Hemant") || voice.name.toLowerCase().includes("male"))
+        ) ||
+        voices.find(voice => voice.lang === "hi-IN") || // fallback: any Hindi voice
+        voices[0]; // final fallback: any available voice
+       // speechSynthesisUtterance.voice = voices.find(voice => voice.lang.includes("hi")) || voices[0];
     }
 
     setTimeout(setVoice, 500); // Ensure voices are loaded
