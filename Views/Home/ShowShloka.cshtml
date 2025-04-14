@@ -46,13 +46,13 @@
         </div>
 
         <div class="navigation-controls">
-            <a href="@Url.Action("ShowShloka", new { id = ViewBag.PreviousId })" class="nav-button @(ViewBag.PreviousId == -1 ? "disabled" : "")" @(ViewBag.PreviousId == -1 ? "disabled" : "")>
+            <a href="@Url.Action("ShowShloka", new { id = ViewBag.PreviousId })" onclick="stopAudio()" class="nav-button @(ViewBag.PreviousId == -1 ? "disabled" : "")" @(ViewBag.PreviousId == -1 ? "disabled" : "")>
                 Pre
             </a>
             <button id="micButton" class="audio-button">
                 <i class="fas fa-volume-up"></i>
             </button>
-            <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" class="nav-button @(ViewBag.NextId == -1 ? "disabled" : "")" @(ViewBag.NextId == -1 ? "disabled" : "")>
+            <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" onclick="stopAudio()" class="nav-button @(ViewBag.NextId == -1 ? "disabled" : "")" @(ViewBag.NextId == -1 ? "disabled" : "")>
                 Next
             </a>
         </div>
@@ -63,6 +63,15 @@
     let isSpeaking = false;
     let speechSynthesisUtterance = new SpeechSynthesisUtterance();
     
+    function stopAudio() {
+        if (isSpeaking) {
+            speechSynthesis.cancel();
+            isSpeaking = false;
+            const micButton = document.getElementById("micButton");
+            micButton.classList.remove('speaking');
+        }
+    }
+
     function setVoice() {
         let voices = speechSynthesis.getVoices();
         speechSynthesisUtterance.voice =
@@ -260,18 +269,37 @@
         pointer-events: none;
     }
 
-    .audio-button {
-        background-color: transparent;
+   .audio-button {
+        background-color: #f0f0f0;
         border: none;
-        color: #FF8C00;
-        font-size: 1.5rem;
-        padding: 0.5rem;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;    
         cursor: pointer;
+        transition: background-color 0.2s ease;
+        margin: 0 1rem;
+    }
+
+    .audio-button i {
+        color: #666;
+        font-size: 1.5rem;
+    }
+
+    .audio-button:hover {
+        background-color: #e0e0e0;
     }
 
     .audio-button.speaking {
-        color: #FF8C00;
+        background-color: #FF8C00;
     }
+
+    .audio-button.speaking i {
+        color: white;
+    }
+
 
     @@media (min-width: 768px) {
         .container {
