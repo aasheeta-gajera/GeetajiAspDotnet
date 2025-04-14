@@ -34,36 +34,59 @@ public class HomeController : Controller
 
     public IActionResult ShowShloka(int id)
     {
-        List<Language> languages = LoadJsonData();
-        Language currentShloka = null;
-        int currentIndex = -1;
-        int totalShlokas = 0;
+        var languages = LoadJsonData();
+        Language? currentShloka = null;
+        var currentIndex = -1;
+        var totalShlokas = 0;
+        var currentLanguage = languages.FirstOrDefault();
 
-        // Get liked shlokas from session
-        var likedShlokas = HttpContext.Session.GetString("LikedShlokas") ?? "[]";
-        var likedIds = JsonConvert.DeserializeObject<List<int>>(likedShlokas);
-
+        // Find the current shloka and its index
         foreach (var lang in languages)
         {
-            if (lang.Data != null)
+            if (lang?.Data != null)
             {
-                currentIndex = lang.Data.FindIndex(item => item.Id == id);
-                if (currentIndex != -1)
+                var shloka = lang.Data.FirstOrDefault(s => s?.Id == id);
+                if (shloka != null)
                 {
-                    currentShloka = lang.Data[currentIndex];
-                    currentShloka.IsLiked = likedIds.Contains(id);
+                    currentShloka = shloka;
+                    currentIndex = lang.Data.FindIndex(s => s?.Id == id);
                     totalShlokas = lang.Data.Count;
+                    ViewBag.ChapterName = lang.Name1 ?? "Unknown Chapter";
+                    currentLanguage = lang;
                     break;
                 }
             }
         }
 
-        if (currentShloka != null)
+        if (currentShloka != null && currentLanguage?.Data != null)
         {
             ViewBag.CurrentIndex = currentIndex;
             ViewBag.TotalShlokas = totalShlokas;
-            ViewBag.PreviousId = currentIndex > 0 ? languages[0].Data[currentIndex - 1].Id : -1;
-            ViewBag.NextId = currentIndex < totalShlokas - 1 ? languages[0].Data[currentIndex + 1].Id : -1;
+            
+            // Handle previous ID
+            int previousId = -1;
+            if (currentIndex > 0 && currentLanguage.Data.Count > currentIndex - 1)
+            {
+                var prevShloka = currentLanguage.Data[currentIndex - 1];
+                if (prevShloka?.Id.HasValue == true)
+                {
+                    previousId = prevShloka.Id.Value;
+                }
+            }
+            ViewBag.PreviousId = previousId;
+
+            // Handle next ID
+            int nextId = -1;
+            if (currentIndex < totalShlokas - 1 && currentLanguage.Data.Count > currentIndex + 1)
+            {
+                var nextShloka = currentLanguage.Data[currentIndex + 1];
+                if (nextShloka?.Id.HasValue == true)
+                {
+                    nextId = nextShloka.Id.Value;
+                }
+            }
+            ViewBag.NextId = nextId;
+
             return View(currentShloka);
         }
 
@@ -81,71 +104,6 @@ public class HomeController : Controller
         }
 
         return NotFound();
-    }
-
-    [HttpPost]
-    public IActionResult ToggleLike([FromBody] LikeRequest request)
-    {
-        var likedShlokas = HttpContext.Session.GetString("LikedShlokas");
-        List<int> likedIds;
-        
-        if (string.IsNullOrEmpty(likedShlokas))
-        {
-            likedIds = new List<int>();
-        }
-        else
-        {
-            likedIds = JsonConvert.DeserializeObject<List<int>>(likedShlokas);
-        }
-
-        // Toggle like status
-        if (likedIds.Contains(request.ShlokaId))
-        {
-            likedIds.Remove(request.ShlokaId);
-        }
-        else
-        {
-            likedIds.Add(request.ShlokaId);
-        }
-
-        // Save back to session
-        HttpContext.Session.SetString("LikedShlokas", JsonConvert.SerializeObject(likedIds));
-        return Json(new { success = true, isLiked = likedIds.Contains(request.ShlokaId) });
-    }
-
-    public IActionResult Favorites()
-    {
-        var likedShlokas = HttpContext.Session.GetString("LikedShlokas");
-        List<int> likedIds;
-        
-        if (string.IsNullOrEmpty(likedShlokas))
-        {
-            likedIds = new List<int>();
-        }
-        else
-        {
-            likedIds = JsonConvert.DeserializeObject<List<int>>(likedShlokas);
-        }
-
-        var languages = LoadJsonData();
-        var favoriteShlokas = new List<Language>();
-
-        // Use a HashSet to track unique shloka IDs
-        var uniqueIds = new HashSet<int>(likedIds);
-
-        foreach (var lang in languages)
-        {
-            if (lang.Data != null)
-            {
-                // Only add shlokas that are in our unique liked IDs
-                favoriteShlokas.AddRange(lang.Data.Where(s => s.Id.HasValue && uniqueIds.Contains(s.Id.Value)));
-            }
-        }
-
-        // Clear any existing liked shlokas and set only the unique ones
-        HttpContext.Session.SetString("LikedShlokas", JsonConvert.SerializeObject(uniqueIds.ToList()));
-
-        return View(favoriteShlokas);
     }
 }
 

@@ -1,49 +1,55 @@
 @model Language
 
-<div class="container mt-4">
-    <div class="card">
-        <div class="card-body">
-            <h2 class="card-title text-center mb-4">Shloka Details</h2>
+<div class="header">
+    <h1 class="title">@ViewBag.ChapterName</h1>
+</div>
 
-            <div class="shloka-content mb-4">
-                <p class="mb-3"><strong>Sanskrit:</strong> @Model.Sanskrit</p>
-                <p class="mb-3"><strong>Hindi:</strong> <span id="hindiText">@Model.Hindi</span></p>
-                <p class="mb-3"><strong>Gujarati:</strong> @Model.Gujrati</p>
+<div class="position-relative text-center">
+    <!-- Top Image -->
+    <img src="~/Assets/image.png" class="img-fluid" style="max-height: 300px; width: auto;" alt="Top Image">
+
+    <!-- Bhagavad Gita Shloka Overlay -->
+    <div class="position-absolute top-50 start-50 translate-middle text-center p-3"
+         style="color: #FF8C00; font-size: 20px; font-weight: bold; line-height: 1.6; border-radius: 10px;">
+        <p class="mb-0">
+            यदा यदा हि धर्मस्य ग्लानिर्भवति भारत। <br>
+            अभ्युत्थानमधर्मस्य तदात्मानं सृजाम्यहम्॥ <br>
+            परित्राणाय साधूनां विनाशाय च दुष्कृताम् <br>
+            धर्मसंस्थापनार्थाय सम्भवामि युगे युगे॥
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="shloka-card">
+        <div class="shloka-content">
+            <div class="sanskrit-text">
+                @Model.Sanskrit
             </div>
 
-            <div class="d-flex justify-content-between align-items-center">
-                <div class="navigation-buttons">
-                    @if (ViewBag.PreviousId != -1)
-                    {
-                        <a href="@Url.Action("ShowShloka", new { id = ViewBag.PreviousId })" class="btn btn-warning">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    }
-                </div>
-
-                <div class="voice-button-container">
-                    <button id="micButton" class="btn btn-primary">
-                        <i class="fas fa-microphone"></i> Speak
-                    </button>
-                </div>
-
-                <div class="navigation-buttons">
-                    <span class="mx-2">@(ViewBag.CurrentIndex + 1) of @ViewBag.TotalShlokas</span>
-
-                    @if (ViewBag.NextId != -1)
-                    {
-                        <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" class="btn btn-warning">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    }
-                </div>
+            <div class="translation hindi-text">
+                @Model.Hindi
             </div>
 
-            <div class="text-center mt-3">
-                <button id="likeButton" class="btn @(Model.IsLiked ? "btn-danger" : "btn-outline-danger")" onclick="toggleLike(@Model.Id)">
-                    <i class="@(Model.IsLiked ? "fas" : "far") fa-heart"></i> @(Model.IsLiked ? "Liked" : "Like")
-                </button>
+            <div class="translation gujarati-text">
+                @Model.Gujrati
             </div>
+        </div>
+
+        <div class="shloka-number">
+            @(ViewBag.CurrentIndex + 1) / @ViewBag.TotalShlokas
+        </div>
+
+        <div class="navigation-controls">
+            <a href="@Url.Action("ShowShloka", new { id = ViewBag.PreviousId })" class="nav-button @(ViewBag.PreviousId == -1 ? "disabled" : "")" @(ViewBag.PreviousId == -1 ? "disabled" : "")>
+                Pre
+            </a>
+            <button id="micButton" class="audio-button">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" class="nav-button @(ViewBag.NextId == -1 ? "disabled" : "")" @(ViewBag.NextId == -1 ? "disabled" : "")>
+                Next
+            </a>
         </div>
     </div>
 </div>
@@ -61,85 +67,175 @@
         ) ||
         voices.find(voice => voice.lang === "hi-IN") || // fallback: any Hindi voice
         voices[0]; // final fallback: any available voice
-       // speechSynthesisUtterance.voice = voices.find(voice => voice.lang.includes("hi")) || voices[0];
     }
 
     setTimeout(setVoice, 500); // Ensure voices are loaded
 
     document.getElementById("micButton").addEventListener("click", function () {
-        const text = document.getElementById("hindiText").innerText;
+        const text = document.querySelector(".hindi-text").innerText;
 
         if (!isSpeaking) {
             speechSynthesisUtterance.text = text;
             speechSynthesisUtterance.lang = "hi-IN"; 
             speechSynthesis.speak(speechSynthesisUtterance);
             isSpeaking = true;
-            this.innerHTML = '<i class="fas fa-volume-up"></i> Stop';
-            this.classList.remove('btn-primary');
-            this.classList.add('btn-danger');
+            this.innerHTML = '<i class="fas fa-volume-up"></i>';
+            this.classList.add('speaking');
         } else {
             speechSynthesis.cancel();
             isSpeaking = false;
-            this.innerHTML = '<i class="fas fa-microphone"></i> Speak';
-            this.classList.remove('btn-danger');
-            this.classList.add('btn-primary');
+            this.innerHTML = '<i class="fas fa-volume-up"></i>';
+            this.classList.remove('speaking');
         }
     });
-
-    function toggleLike(shlokaId) {
-        const likeButton = document.getElementById('likeButton');
-        const isLiked = likeButton.classList.contains('btn-danger');
-        
-        fetch('/Home/ToggleLike', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ shlokaId: shlokaId })
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                if (data.isLiked) {
-                    likeButton.classList.remove('btn-outline-danger');
-                    likeButton.classList.add('btn-danger');
-                    likeButton.innerHTML = '<i class="fas fa-heart"></i> Liked';
-                } else {
-                    likeButton.classList.remove('btn-danger');
-                    likeButton.classList.add('btn-outline-danger');
-                    likeButton.innerHTML = '<i class="far fa-heart"></i> Like';
-                }
-            }
-        });
-    }
 </script>
 
 <style>
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        background-color: white;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+    .title {
+        color: #FF8C00;
+        font-size: 1.5rem;
+        margin: 0;
+    }
+
+    .container {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .shloka-card {
+        background: white;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .shloka-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .shloka-content {
-        font-size: 1.1em;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .sanskrit-text {
+        font-size: 1.2rem;
+        color: #FF8C00;
+        text-align: center;
+        font-family: 'Noto Sans Devanagari', sans-serif;
+        font-weight: bold;
+    }
+
+    .translation {
+        text-align: center;
+        color: #666;
         line-height: 1.6;
     }
-    .navigation-buttons {
+
+    .hindi-text {
+        font-family: 'Noto Sans Devanagari', sans-serif;
+        color: #000000;
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .gujarati-text {
+        font-family: 'Noto Sans Gujarati', sans-serif;
+        color: #333;
+    }
+
+    .shloka-number {
+        text-align: center;
+        color: #FF8C00;
+        padding: 1rem;
+        font-weight: bold;
+    }
+
+    .navigation-controls {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 10px;
+        padding: 1rem;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
-    .voice-button-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .btn {
-        padding: 8px 16px;
-    }
-    .btn-warning {
-        background-color: #ff9800;
-        border-color: #ff9800;
+
+    .nav-button {
+        background-color: #FF8C00;
         color: white;
+        border: none;
+        padding: 0.8rem 2rem;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
     }
-    .btn-warning:hover {
-        background-color: #f57c00;
-        border-color: #f57c00;
+
+    .nav-button:hover {
+        background-color: #ff9819;
         color: white;
+        text-decoration: none;
+    }
+
+    .nav-button.disabled {
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .audio-button {
+        background-color: transparent;
+        border: none;
+        color: #FF8C00;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .audio-button.speaking {
+        color: #FF8C00;
+    }
+
+    @@media (min-width: 768px) {
+        .container {
+            max-width: 768px;
+            margin: 0 auto;
+        }
+
+        .shloka-card {
+            margin-top: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navigation-controls {
+            position: static;
+            box-shadow: none;
+            border-top: 1px solid #eee;
+        }
     }
 </style>
