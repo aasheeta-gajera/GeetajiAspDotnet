@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
+using System;
 
 public class HomeController : Controller
 {
@@ -104,6 +105,17 @@ public class HomeController : Controller
         }
 
         return NotFound();
+    }
+
+    [HttpPost]
+    public IActionResult ToggleFavorite(int shlokaId, string chapterName, int shlokaNumber, string shlokaText)
+    {
+        return Json(new { success = true });
+    }
+
+    public IActionResult Favorites()
+    {
+        return View(new List<FavoriteShloka>());
     }
 }
 

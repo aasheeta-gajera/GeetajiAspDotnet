@@ -23,6 +23,11 @@
 <div class="container">
     <div class="shloka-card">
         <div class="shloka-content">
+            <div class="d-flex justify-content-end mb-2">
+                <button class="btn btn-link favorite-btn" id="favoriteBtn">
+                    <i class="fas fa-heart"></i>
+                </button>
+            </div>
             <div class="sanskrit-text">
                 @Model.Sanskrit
             </div>
@@ -88,6 +93,53 @@
             this.classList.remove('speaking');
         }
     });
+
+    // Favorite functionality
+    document.addEventListener('DOMContentLoaded', function() {
+        const favoriteBtn = document.getElementById('favoriteBtn');
+        const shlokaId = @ViewBag.CurrentIndex;
+        const chapterName = '@ViewBag.ChapterName';
+        const shlokaNumber = @(ViewBag.CurrentIndex + 1);
+        const shlokaText = document.querySelector('.sanskrit-text').innerText;
+
+        // Check if this shloka is already favorited
+        const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+        const isFavorite = favorites.some(f => f.shlokaId === shlokaId);
+        updateFavoriteButton(isFavorite);
+
+        favoriteBtn.addEventListener('click', function() {
+            let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+            const index = favorites.findIndex(f => f.shlokaId === shlokaId);
+
+            if (index === -1) {
+                // Add to favorites
+                favorites.push({
+                    shlokaId,
+                    chapterName,
+                    shlokaNumber,
+                    shlokaText,
+                    createdAt: new Date().toISOString()
+                });
+                updateFavoriteButton(true);
+            } else {
+                // Remove from favorites
+                favorites.splice(index, 1);
+                updateFavoriteButton(false);
+            }
+
+            localStorage.setItem('favorites', JSON.stringify(favorites));
+        });
+    });
+
+    function updateFavoriteButton(isFavorite) {
+        const favoriteBtn = document.getElementById('favoriteBtn');
+        const icon = favoriteBtn.querySelector('i');
+        if (isFavorite) {
+            icon.classList.add('text-danger');
+        } else {
+            icon.classList.remove('text-danger');
+        }
+    }
 </script>
 
 <style>

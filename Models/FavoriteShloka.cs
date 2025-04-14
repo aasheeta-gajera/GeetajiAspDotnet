@@ -1,10 +1,8 @@
-using System.Collections.Generic;
-
-public class Shloka
+public class FavoriteShloka
 {
-    public int Id { get; set; }
+    public int ShlokaId { get; set; }
     public string ChapterName { get; set; }
-    public int TotalShlokas { get; set; }
     public int ShlokaNumber { get; set; }
     public string ShlokaText { get; set; }
-}
+    public DateTime CreatedAt { get; set; }
+} 

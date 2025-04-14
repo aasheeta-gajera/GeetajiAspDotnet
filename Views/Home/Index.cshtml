@@ -93,3 +93,19 @@
         </div>
     }
 </div>
+
+@section Scripts {
+    <script>
+        function toggleFavorite(shlokaId, chapterName, shlokaNumber) {
+            $.post('/Home/ToggleFavorite', { shlokaId, chapterName, shlokaNumber })
+                .done(function(response) {
+                    const btn = $(event.currentTarget);
+                    const icon = btn.find('i');
+                    if (response.success) {
+                        btn.toggleClass('active');
+                        icon.toggleClass('text-danger text-secondary');
+                    }
+                });
+        }
+    </script>
+}
