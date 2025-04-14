@@ -40,31 +40,14 @@
                     </div>
                     <div class="chapter-info">
                         <span class="chapter-name">${favorite.chapterName}</span>
-                        <span class="shloka-number">Shloka ${favorite.shlokaNumber}</span>
                     </div>
-                    <div class="favorite-actions">
-                        <button class="btn btn-link unlike-btn" data-shloka-id="${favorite.shlokaId}">
-                            <i class="fas fa-times"></i>
-                        </button>
+                    <div class="shloka-progress" style="margin-left: auto;">
+                        <span>${favorite.shlokaNumber}/${favorite.totalShlokas}</span>
                     </div>`;
                 
                 // Make the item clickable to go to the shloka
-                favoriteItem.addEventListener('click', function(e) {
-                    // Don't navigate if clicking the unlike button
-                    if (!e.target.closest('.unlike-btn')) {
-                        window.location.href = `/Home/ShowShloka/${favorite.shlokaId}`;
-                    }
-                });
-
-                // Add unlike functionality
-                const unlikeBtn = favoriteItem.querySelector('.unlike-btn');
-                unlikeBtn.addEventListener('click', function(e) {
-                    e.stopPropagation(); // Prevent the parent click event
-                    const shlokaId = parseInt(this.dataset.shlokaId);
-                    let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-                    favorites = favorites.filter(f => f.shlokaId !== shlokaId);
-                    localStorage.setItem('favorites', JSON.stringify(favorites));
-                    loadFavorites(); // Reload the list
+                favoriteItem.addEventListener('click', function() {
+                    window.location.href = `/Home/ShowShloka/${favorite.shlokaId}`;
                 });
                 
                 favoritesList.appendChild(favoriteItem);
@@ -133,22 +116,10 @@
         margin-top: 0.2rem;
     }
 
-    .favorite-actions {
-        margin-left: 1rem;
-    }
-
-    .unlike-btn {
-        color: #dc3545;
-        padding: 0.5rem;
-        border-radius: 50%;
-        transition: background-color 0.2s ease;
-    }
-
-    .unlike-btn:hover {
-        background-color: #ffebee;
-    }
-
-    .unlike-btn i {
-        font-size: 1.2rem;
+    .shloka-progress {
+        color: #FF8C00;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-left: auto;
     }
 </style> 

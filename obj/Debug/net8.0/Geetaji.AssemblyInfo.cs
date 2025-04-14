@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Geetaji")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7afbdcd4b9f7311878040b4166afa6344c0904b7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b604d4fd28fc3317bce033f4e566fb6c0d13b194")]
 [assembly: System.Reflection.AssemblyProductAttribute("Geetaji")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Geetaji")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
