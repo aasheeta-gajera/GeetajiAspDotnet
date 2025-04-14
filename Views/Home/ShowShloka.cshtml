@@ -97,7 +97,7 @@
     // Favorite functionality
     document.addEventListener('DOMContentLoaded', function() {
         const favoriteBtn = document.getElementById('favoriteBtn');
-        const shlokaId = @ViewBag.CurrentIndex;
+        const shlokaId = @Model.Id;
         const chapterName = '@ViewBag.ChapterName';
         const shlokaNumber = @(ViewBag.CurrentIndex + 1);
         const shlokaText = document.querySelector('.sanskrit-text').innerText;

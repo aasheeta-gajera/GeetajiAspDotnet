@@ -1,15 +1,20 @@
-@model List<FavoriteShloka>
+@{
+    ViewData["Title"] = "Favorite";
+}
 
 <div class="container">
-    <h2 class="text-center mb-4">Your Favorite Shlokas</h2>
-    
+    <h2 class="favorite-title">Favorite</h2>
+
     <div id="favorites-list" class="favorite-list">
-        <!-- Favorites will be loaded here dynamically -->
     </div>
 </div>
 
 @section Scripts {
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFavorites();
+        });
+
         function loadFavorites() {
             const favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
             const favoritesList = document.getElementById('favorites-list');
@@ -23,45 +28,127 @@
                 return;
             }
 
+            // Sort favorites by shlokaId to maintain order
+            favorites.sort((a, b) => a.shlokaId - b.shlokaId);
+
             favorites.forEach(favorite => {
                 const favoriteItem = document.createElement('div');
-                favoriteItem.className = 'favorite-item mb-4 p-3 border rounded';
+                favoriteItem.className = 'favorite-item';
                 favoriteItem.innerHTML = `
-                    <div class="d-flex justify-content-between align-items-center">
-                        <h5>${favorite.chapterName} - Shloka ${favorite.shlokaNumber}</h5>
-                        <button class="btn btn-link favorite-btn active" 
-                                onclick="toggleFavorite(${favorite.shlokaId}, '${favorite.chapterName}', ${favorite.shlokaNumber}, '${favorite.shlokaText}')">
-                            <i class="fas fa-heart text-danger"></i>
-                        </button>
+                    <div class="favorite-circle">
+                        <i class="fas fa-heart"></i>
                     </div>
-                    <div class="shloka-text mt-2">
-                        ${favorite.shlokaText}
+                    <div class="chapter-info">
+                        <span class="chapter-name">${favorite.chapterName}</span>
+                        <span class="shloka-number">Shloka ${favorite.shlokaNumber}</span>
+                    </div>
+                    <div class="favorite-actions">
+                        <button class="btn btn-link unlike-btn" data-shloka-id="${favorite.shlokaId}">
+                            <i class="fas fa-times"></i>
+                        </button>
                     </div>`;
+                
+                // Make the item clickable to go to the shloka
+                favoriteItem.addEventListener('click', function(e) {
+                    // Don't navigate if clicking the unlike button
+                    if (!e.target.closest('.unlike-btn')) {
+                        window.location.href = `/Home/ShowShloka/${favorite.shlokaId}`;
+                    }
+                });
+
+                // Add unlike functionality
+                const unlikeBtn = favoriteItem.querySelector('.unlike-btn');
+                unlikeBtn.addEventListener('click', function(e) {
+                    e.stopPropagation(); // Prevent the parent click event
+                    const shlokaId = parseInt(this.dataset.shlokaId);
+                    let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
+                    favorites = favorites.filter(f => f.shlokaId !== shlokaId);
+                    localStorage.setItem('favorites', JSON.stringify(favorites));
+                    loadFavorites(); // Reload the list
+                });
+                
                 favoritesList.appendChild(favoriteItem);
             });
         }
-
-        function toggleFavorite(shlokaId, chapterName, shlokaNumber, shlokaText) {
-            let favorites = JSON.parse(localStorage.getItem('favorites') || '[]');
-            const index = favorites.findIndex(f => f.shlokaId === shlokaId);
-
-            if (index === -1) {
-                favorites.push({
-                    shlokaId,
-                    chapterName,
-                    shlokaNumber,
-                    shlokaText,
-                    createdAt: new Date().toISOString()
-                });
-            } else {
-                favorites.splice(index, 1);
-            }
-
-            localStorage.setItem('favorites', JSON.stringify(favorites));
-            loadFavorites();
-        }
-
-        // Load favorites when the page loads
-        document.addEventListener('DOMContentLoaded', loadFavorites);
     </script>
-} 
+}
+
+<style>
+    .favorite-title {
+        color: #FF8C00;
+        text-align: center;
+        font-size: 2rem;
+        margin: 1.5rem 0;
+    }
+
+    .favorite-list {
+        padding: 1rem;
+    }
+
+    .favorite-item {
+        display: flex;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        position: relative;
+    }
+
+    .favorite-item:hover {
+        background-color: #fff5e6;
+    }
+
+    .favorite-circle {
+        width: 50px;
+        height: 50px;
+        background-color: #FF8C00;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1rem;
+    }
+
+    .favorite-circle i {
+        color: white;
+        font-size: 1.5rem;
+    }
+
+    .chapter-info {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .chapter-name {
+        font-size: 1.2rem;
+        color: #333;
+        font-weight: 500;
+    }
+
+    .shloka-number {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.2rem;
+    }
+
+    .favorite-actions {
+        margin-left: 1rem;
+    }
+
+    .unlike-btn {
+        color: #dc3545;
+        padding: 0.5rem;
+        border-radius: 50%;
+        transition: background-color 0.2s ease;
+    }
+
+    .unlike-btn:hover {
+        background-color: #ffebee;
+    }
+
+    .unlike-btn i {
+        font-size: 1.2rem;
+    }
+</style> 
