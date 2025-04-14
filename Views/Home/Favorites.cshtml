@@ -22,7 +22,8 @@
 
             if (favorites.length === 0) {
                 favoritesList.innerHTML = `
-                    <div class="text-center">
+                    <div class="empty-favorites">
+                        <i class="fas fa-heart empty-heart"></i>
                         <p>You haven't added any shlokas to your favorites yet.</p>
                     </div>`;
                 return;
@@ -66,6 +67,24 @@
 
     .favorite-list {
         padding: 1rem;
+    }
+
+    .empty-favorites {
+        text-align: center;
+        padding: 3rem 1rem;
+        color: #FF8C00;
+    }
+
+    .empty-favorites .empty-heart {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        opacity: 0.5;
+    }
+
+    .empty-favorites p {
+        font-size: 1.2rem;
+        color: #666;
+        margin: 0;
     }
 
     .favorite-item {
