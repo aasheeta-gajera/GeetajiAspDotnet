@@ -4,12 +4,6 @@
     ViewData["Title"] = "Show Names";
 }
 
-<div class="back-button-container">
-    <a href="@Url.Action("Index", "Home")" class="back-button">
-        <i class="fas fa-arrow-left"></i> Back to All Chapters
-    </a>
-</div>
-
 <div class="position-relative text-center">
     <!-- Top Image -->
     <img src="~/Assets/image.png" class="img-fluid" style="max-height: 300px; width: auto;" alt="Top Image">
@@ -52,27 +46,6 @@
 }
 
 <style>
-   .back-button-container {
-        margin: 10px 15px 20px 15px;
-   }
-   
-   .back-button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #FF8C00;
-        color: white;
-        font-weight: bold;
-        text-decoration: none;
-        border-radius: 10px;
-        transition: background-color 0.3s ease;
-   }
-   
-   .back-button:hover {
-        background-color: #E67E00;
-        color: white;
-        text-decoration: none;
-   }
-
    .custom-container {
         display: flex;
         border: 3px solid #FF8C00;

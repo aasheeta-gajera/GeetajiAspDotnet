@@ -58,6 +58,39 @@
             background-color: white;
             color: #FF8C00 !important;
         }
+
+        /* Navigation Icons */
+        .nav-icon-container {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .nav-icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #FF8C00;
+            color: white !important;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 8px;
+            border: 2px solid white;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-icon-btn:hover {
+            background-color: white;
+            color: #FF8C00 !important;
+            text-decoration: none;
+        }
+        
+        /* Disabled navigation button */
+        .nav-icon-btn.disabled {
+            opacity: 0.5;
+            pointer-events: none;
+        }
     </style>
 </head>
 <body>
@@ -71,13 +104,54 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
+                    <a href="@Url.Action("Index", "Home")" class="nav-icon-btn" title="Home">
+                            <i class="fas fa-home"></i>
+                        </a>
+                        <!-- <li class="nav-item">
                             <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Index" ? "active" : "")" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
+                        </li> -->
                         <li class="nav-item">
                             <a class="nav-link @(ViewContext.RouteData.Values["Action"]?.ToString() == "Favorites" ? "active" : "")" asp-controller="Home" asp-action="Favorites">Favorites</a>
                         </li>
                     </ul>
+                    
+                    <!-- Navigation Icons - Always visible -->
+                    <div class="nav-icon-container">
+                        <!-- Home button - always visible -->
+                        <!-- <a href="@Url.Action("Index", "Home")" class="nav-icon-btn" title="Home">
+                            <i class="fas fa-home"></i>
+                        </a>
+                         -->    
+                        <!-- Navigation based on current view -->
+                        @if (ViewContext.RouteData.Values["Action"]?.ToString() == "ShowShloka")
+                        {
+                            <!-- Chapter list button -->
+                            @if (ViewBag.ChapterId != null)
+                            {
+                                <a href="@Url.Action("ShowNames", "Home", new { chapterId = ViewBag.ChapterId })" class="nav-icon-btn" title="Chapter Shlokas">
+                                    <i class="fas fa-list"></i>
+                                </a>
+                            }
+                        }
+                        
+                        <!-- Chapter navigation for ShowNames view -->
+                        @if (ViewContext.RouteData.Values["Action"]?.ToString() == "ShowNames")
+                        {
+                            @if (ViewBag.PreviousChapterId != null && ViewBag.PreviousChapterId != -1)
+                            {
+                                <a href="@Url.Action("ShowNames", "Home", new { chapterId = ViewBag.PreviousChapterId })" class="nav-icon-btn" title="Previous Chapter">
+                                    <i class="fas fa-chevron-left"></i>
+                                </a>
+                            }
+                            
+                            @if (ViewBag.NextChapterId != null && ViewBag.NextChapterId != -1)
+                            {
+                                <a href="@Url.Action("ShowNames", "Home", new { chapterId = ViewBag.NextChapterId })" class="nav-icon-btn" title="Next Chapter">
+                                    <i class="fas fa-chevron-right"></i>
+                                </a>
+                            }
+                        }
+                    </div>
                 </div>
             </div>
         </nav>

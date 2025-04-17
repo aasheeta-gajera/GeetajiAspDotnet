@@ -1,9 +1,5 @@
 @model Shloka
 
-<div class="header">
-    <h1 class="title">@ViewBag.ChapterName</h1>
-</div>
-
 <div class="position-relative text-center">
     <!-- Top Image -->
     <img src="~/Assets/image.png" class="img-fluid" style="max-height: 300px; width: auto;" alt="Top Image">
@@ -26,13 +22,13 @@
 </div>
 
 <div class="container">
+    <!-- Chapter Name Display -->
+    <div class="chapter-name">
+        <h3>@ViewBag.ChapterName</h3>
+    </div>
+    
     <div class="shloka-card">
         <div class="shloka-content">
-            <!-- <div class="d-flex justify-content-end mb-2">
-                <button class="btn btn-link favorite-btn" id="favoriteBtn">
-                    <i class="fas fa-heart"></i>
-                </button>
-            </div> -->
             <div class="sanskrit-text">
                 @Model.Sanskrit
             </div>
@@ -51,36 +47,21 @@
         </div>
 
         <div class="navigation-controls">
-            <a href="@Url.Action("ShowShloka", new { id = ViewBag.PreviousId })" onclick="stopAudio()" class="nav-button @(ViewBag.PreviousId == -1 ? "disabled" : "")" @(ViewBag.PreviousId == -1 ? "disabled" : "")>
+            <a href="@Url.Action("ShowShloka", "Home", new { id = ViewBag.PreviousId })" 
+               class="nav-button @(ViewBag.PreviousId == -1 ? "disabled" : "")">
                 Pre
             </a>
-            <button id="micButton" class="audio-button">
-                <i class="fas fa-volume-up"></i>
-            </button>
-            <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" onclick="stopAudio()" class="nav-button @(ViewBag.NextId == -1 ? "disabled" : "")" @(ViewBag.NextId == -1 ? "disabled" : "")>
+            
+            <div class="audio-controls">
+                <button id="micButton" class="audio-button">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+            </div>
+            
+            <a href="@Url.Action("ShowShloka", "Home", new { id = ViewBag.NextId })" 
+               class="nav-button @(ViewBag.NextId == -1 ? "disabled" : "")">
                 Next
             </a>
-        </div>
-        
-        <div class="chapter-navigation">
-            <a href="@Url.Action("Index", "Home")" class="chapter-btn">
-                <i class="fas fa-home"></i> Home
-            </a>
-            <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.ChapterId })" class="chapter-btn">
-                <i class="fas fa-list"></i> Chapter
-            </a>
-            @if(ViewBag.PreviousChapterId != -1)
-            {
-                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.PreviousChapterId })" class="chapter-btn">
-                    <i class="fas fa-arrow-left"></i> Previous
-                </a>
-            }
-            @if(ViewBag.NextChapterId != -1)
-            {
-                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.NextChapterId })" class="chapter-btn">
-                    Next <i class="fas fa-arrow-right"></i>
-                </a>
-            }
         </div>
     </div>
 </div>
@@ -179,23 +160,6 @@
 </script>
 
 <style>
-    .header {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 1rem;
-        background-color: white;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-    }
-
-    .title {
-        color: #FF8C00;
-        font-size: 1.5rem;
-        margin: 0;
-    }
-
     .container {
         padding: 0;
         max-width: 100%;
@@ -267,11 +231,6 @@
         align-items: center;
         padding: 1rem;
         background-color: #fff;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
     }
 
     .nav-button {
@@ -348,36 +307,6 @@
         transition: transform 0.2s ease;
     }
 
-    .chapter-navigation {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-        margin: 20px 0;
-        padding: 10px;
-    }
-
-    .chapter-btn {
-        background-color: #FF8C00;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    .chapter-btn:hover {
-        background-color: #E67E00;
-        color: white;
-        text-decoration: none;
-        transform: translateY(-3px);
-    }
-
     @@media (min-width: 768px) {
         .container {
             max-width: 768px;
@@ -390,10 +319,20 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        .navigation-controls {
-            position: static;
-            box-shadow: none;
+        .audio-controls {
             border-top: 1px solid #eee;
         }
+    }
+
+    .chapter-name {
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .chapter-name h3 {
+        color: #FF8C00;
+        font-weight: bold;
+        font-size: 1.5rem;
     }
 </style>
