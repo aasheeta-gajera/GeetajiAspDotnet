@@ -1,8 +1,16 @@
 {
   "Files": [
     {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\geetaji.png",
+      "PackagePath": "staticwebassets\\Assets\\geetaji.png"
+    },
+    {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\image.png",
       "PackagePath": "staticwebassets\\Assets\\image.png"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\krishna.png",
+      "PackagePath": "staticwebassets\\Assets\\krishna.png"
     },
     {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\fixed_languages.json",

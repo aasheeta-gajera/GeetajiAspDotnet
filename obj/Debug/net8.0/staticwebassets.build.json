@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yzLCB9NhG0cwp4jGs2TbD0TQWp4wpCmdB8TdAmLP054=",
+  "Hash": "lA4foEb48CUcbwF4JTM+ZzqZDoZuz6Gt6xTX7nE+kTc=",
   "Source": "Geetaji",
   "BasePath": "_content/Geetaji",
   "Mode": "Default",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\geetaji.png",
+      "SourceId": "Geetaji",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\",
+      "BasePath": "_content/Geetaji",
+      "RelativePath": "Assets/geetaji.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\geetaji.png"
+    },
     {
       "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\image.png",
       "SourceId": "Geetaji",
@@ -34,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\image.png"
+    },
+    {
+      "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\krishna.png",
+      "SourceId": "Geetaji",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\",
+      "BasePath": "_content/Geetaji",
+      "RelativePath": "Assets/krishna.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\krishna.png"
     },
     {
       "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\css\\site.css",

@@ -150,9 +150,3 @@ public class HomeController : Controller
         return View(favoriteShlokas);
     }
 }
-
-public class LikeRequest
-{
-    public int ShlokaId { get; set; }
-}
-

@@ -26,10 +26,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\GIT\GeetajiAspDotnet
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/GIT/GeetajiAspDotnet/Views/FirebaseData/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmlyZWJhc2VEYXRhXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [D:/GIT/GeetajiAspDotnet/Views/Home/ChapterDetails.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDaGFwdGVyRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

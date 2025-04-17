@@ -1,8 +1,0 @@
-public class FavoriteShloka
-{
-    public int Id { get; set; }
-    public string? ChapterName { get; set; }
-    public int ShlokaNumber { get; set; }
-    public string? ShlokaText { get; set; }
-    public bool IsLiked { get; set; }
-} 
