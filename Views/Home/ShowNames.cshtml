@@ -5,6 +5,10 @@
 }
 
 <div class="position-relative text-center">
+ <div>
+        <h3 class="mb-0" style="color: #FF8C00;">@ViewBag.ChapterName</h3>
+    </div>
+    <br>
     <!-- Top Image -->
     <img src="~/Assets/image.png" class="img-fluid" style="max-height: 300px; width: auto;" alt="Top Image">
 
@@ -20,10 +24,9 @@
     </div>
 </div>
 
+    <br>
 <div class="chapter-info-container">
-    <div class="chapter-info left">
-        <h3 class="mb-0" style="color: #FF8C00;">@ViewBag.ChapterName</h3>
-    </div>
+   
     <div class="chapter-info right">
         <h3 class="mb-0" style="color: #FF8C00;">Total Shlokas: @ViewBag.TotalShlokas</h3>
     </div>
@@ -39,7 +42,7 @@
             @counter
         </div>
         <div class="list-section">
-            @item.ShlokaText
+            @($"श्लोक {counter}")
         </div>
     </div>
     counter++;

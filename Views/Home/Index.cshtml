@@ -76,8 +76,9 @@
         </div>
     </div>
 
+    <br>
     <!-- List Section -->
-    <h2 class="text-center">भागवत गीता</h2>
+    <h2 class="text-center">श्रीमद्भगवद्गीता</h2>
 
     @model List<Language>
 
@@ -85,7 +86,7 @@
     {
         <div class="custom-container" onclick="window.location.href='@Url.Action("ShowNames", "Home", new { chapterId = lang.Id })'">
             <div class="count-section">
-                @lang.Number1
+                @lang.Id
             </div>
             <div class="list-section">
                 @lang.Name1
