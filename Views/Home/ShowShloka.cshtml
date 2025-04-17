@@ -1,4 +1,4 @@
-@model Language
+@model Shloka
 
 <div class="header">
     <h1 class="title">@ViewBag.ChapterName</h1>
@@ -60,6 +60,19 @@
             <a href="@Url.Action("ShowShloka", new { id = ViewBag.NextId })" onclick="stopAudio()" class="nav-button @(ViewBag.NextId == -1 ? "disabled" : "")" @(ViewBag.NextId == -1 ? "disabled" : "")>
                 Next
             </a>
+        </div>
+        
+        <div class="chapter-navigation mt-4 mb-4 text-center">
+            <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary mx-2">All Chapters</a>
+            <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.ChapterId })" class="btn btn-outline-primary mx-2">Chapter List</a>
+            @if(ViewBag.PreviousChapterId != -1)
+            {
+                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.PreviousChapterId })" class="btn btn-outline-primary mx-2">Previous Chapter</a>
+            }
+            @if(ViewBag.NextChapterId != -1)
+            {
+                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.NextChapterId })" class="btn btn-outline-primary mx-2">Next Chapter</a>
+            }
         </div>
     </div>
 </div>

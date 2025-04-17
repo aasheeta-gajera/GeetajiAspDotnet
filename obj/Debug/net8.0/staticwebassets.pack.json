@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Assets\\image.png"
     },
     {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\fixed_languages.json",
+      "PackagePath": "staticwebassets\\Data\\fixed_languages.json"
+    },
+    {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\languages.json",
       "PackagePath": "staticwebassets\\Data\\languages.json"
     },
@@ -15,6 +19,10 @@
     {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\js\\firebase-config.js",
+      "PackagePath": "staticwebassets\\js\\firebase-config.js"
     },
     {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\js\\site.js",

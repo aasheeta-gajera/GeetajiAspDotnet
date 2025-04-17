@@ -1,0 +1,44 @@
+@model List<Language>
+@{
+    ViewData["Title"] = "Firebase Data";
+}
+
+<div class="container mt-5">
+    <h2>Firebase Data</h2>
+    <p>Showing data from Firebase Firestore</p>
+
+    @if (Model != null && Model.Any())
+    {
+        <div class="row">
+            @foreach (var language in Model)
+            {
+                <div class="col-md-4 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5>@language.Name1</h5>
+                            <h6>@language.Name2</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>Total Shlokas: @(language.Data?.Count ?? 0)</p>
+                            <div class="list-group">
+                                @foreach (var shloka in language.Data ?? new List<Shloka>())
+                                {
+                                    <div class="list-group-item">
+                                        <h6>Shloka @shloka.ShlokaNumber</h6>
+                                        <p>@shloka.ShlokaText</p>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-warning">
+            No data found in Firebase. Please make sure you have migrated the data.
+        </div>
+    }
+</div> 

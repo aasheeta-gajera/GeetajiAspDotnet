@@ -7,6 +7,8 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddControllersWithViews();
+builder.Services.AddSingleton<FirebaseService>();
+builder.Services.AddSingleton<FirebaseMigrationService>();
 
 // Add session services
 builder.Services.AddSession(options =>
@@ -43,3 +45,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+// Visit http://localhost:5287/  to import all 18 chapters with shlokas

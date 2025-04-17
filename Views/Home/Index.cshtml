@@ -83,7 +83,7 @@
 
     @foreach (var lang in Model)
     {
-        <div class="custom-container" onclick="window.location.href='@Url.Action("ShowNames", "Home", new { index = Model.IndexOf(lang) })'">
+        <div class="custom-container" onclick="window.location.href='@Url.Action("ShowNames", "Home", new { chapterId = lang.Id })'">
             <div class="count-section">
                 @lang.Number1
             </div>

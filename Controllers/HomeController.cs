@@ -5,38 +5,43 @@ using System.IO;
 using Newtonsoft.Json;
 using System.Linq;
 using System;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Configuration;
 
 public class HomeController : Controller
 {
-    private List<Language> LoadJsonData()
+    private readonly FirebaseService _firebaseService;
+
+    public HomeController(IConfiguration configuration)
     {
-        string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "languages.json");
-        string jsonData = System.IO.File.ReadAllText(filePath);
-        return JsonConvert.DeserializeObject<List<Language>>(jsonData);
+        _firebaseService = new FirebaseService(configuration);
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        List<Language> languages = LoadJsonData();
+        var languages = await _firebaseService.GetAllLanguages();
         return View(languages);
     }
 
-    public IActionResult ShowNames(int index)
+    public async Task<IActionResult> ShowNames(int chapterId)
     {
-        List<Language> languages = LoadJsonData();
-        if (index < languages.Count)
+        var languages = await _firebaseService.GetAllLanguages();
+        var chapter = languages.FirstOrDefault(c => c.Id == chapterId);
+        
+        if (chapter != null)
         {
-            ViewBag.ChapterName = languages[index].Name1;
-            ViewBag.TotalShlokas = languages[index].Data?.Count ?? 0;
-            return View(languages[index].Data);
+            ViewBag.ChapterName = chapter.Name1;
+            ViewBag.TotalShlokas = chapter.Data?.Count ?? 0;
+            ViewBag.ChapterId = chapter.Id;
+            return View(chapter.Data);
         }
         return RedirectToAction("Index");
     }
 
-    public IActionResult ShowShloka(int id)
+    public async Task<IActionResult> ShowShloka(int id)
     {
-        var languages = LoadJsonData();
-        Language? currentShloka = null;
+        var languages = await _firebaseService.GetAllLanguages();
+        Shloka? currentShloka = null;
         var currentIndex = -1;
         var totalShlokas = 0;
         var currentLanguage = languages.FirstOrDefault();
@@ -53,6 +58,7 @@ public class HomeController : Controller
                     currentIndex = lang.Data.FindIndex(s => s?.Id == id);
                     totalShlokas = lang.Data.Count;
                     ViewBag.ChapterName = lang.Name1 ?? "Unknown Chapter";
+                    ViewBag.ChapterId = lang.Id;
                     currentLanguage = lang;
                     break;
                 }
@@ -69,9 +75,9 @@ public class HomeController : Controller
             if (currentIndex > 0 && currentLanguage.Data.Count > currentIndex - 1)
             {
                 var prevShloka = currentLanguage.Data[currentIndex - 1];
-                if (prevShloka?.Id.HasValue == true)
+                if (prevShloka != null)
                 {
-                    previousId = prevShloka.Id.Value;
+                    previousId = prevShloka.Id;
                 }
             }
             ViewBag.PreviousId = previousId;
@@ -81,12 +87,31 @@ public class HomeController : Controller
             if (currentIndex < totalShlokas - 1 && currentLanguage.Data.Count > currentIndex + 1)
             {
                 var nextShloka = currentLanguage.Data[currentIndex + 1];
-                if (nextShloka?.Id.HasValue == true)
+                if (nextShloka != null)
                 {
-                    nextId = nextShloka.Id.Value;
+                    nextId = nextShloka.Id;
                 }
             }
             ViewBag.NextId = nextId;
+            
+            // Handle previous and next chapters
+            int currentChapterIndex = languages.FindIndex(l => l.Id == currentLanguage.Id);
+            
+            // Previous chapter
+            int prevChapterId = -1;
+            if (currentChapterIndex > 0)
+            {
+                prevChapterId = languages[currentChapterIndex - 1].Id;
+            }
+            ViewBag.PreviousChapterId = prevChapterId;
+            
+            // Next chapter
+            int nextChapterId = -1;
+            if (currentChapterIndex < languages.Count - 1)
+            {
+                nextChapterId = languages[currentChapterIndex + 1].Id;
+            }
+            ViewBag.NextChapterId = nextChapterId;
 
             return View(currentShloka);
         }
@@ -94,28 +119,35 @@ public class HomeController : Controller
         return RedirectToAction("Index");
     }
 
-    public IActionResult ShlokaDetails(int id)
+    public async Task<IActionResult> ShlokaDetails(int id)
     {
-        var languages = LoadJsonData();
-        var selectedLanguage = languages.FirstOrDefault(lang => lang.Id == id);
-
-        if (selectedLanguage != null && selectedLanguage.Data != null)
+        var shloka = await _firebaseService.GetShlokaById(id);
+        if (shloka != null)
         {
-            return View(selectedLanguage.Data);
+            return View(shloka);
         }
-
-        return NotFound();
+        return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult ToggleFavorite(int shlokaId, string chapterName, int shlokaNumber, string shlokaText)
+    public async Task<IActionResult> ToggleFavorite(int shlokaId)
     {
-        return Json(new { success = true });
+        var shloka = await _firebaseService.GetShlokaById(shlokaId);
+        if (shloka != null)
+        {
+            shloka.IsLiked = !shloka.IsLiked;
+            await _firebaseService.UpdateShloka(shloka);
+        }
+        return RedirectToAction("ShlokaDetails", new { id = shlokaId });
     }
 
-    public IActionResult Favorites()
+    public async Task<IActionResult> Favorites()
     {
-        return View(new List<FavoriteShloka>());
+        var languages = await _firebaseService.GetAllLanguages();
+        var favoriteShlokas = languages.SelectMany(l => l.Data)
+                                     .Where(s => s.IsLiked)
+                                     .ToList();
+        return View(favoriteShlokas);
     }
 }
 

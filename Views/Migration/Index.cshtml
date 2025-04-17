@@ -1,0 +1,158 @@
+@{
+    ViewData["Title"] = "Data Migration";
+}
+
+<div class="container mt-5">
+    <h2>Manage Firebase Data</h2>
+    <p>Use the buttons below to manage your data in Firebase.</p>
+    
+    <div class="mb-4">
+        <h4>Complete Migration</h4>
+        <p>Migrate all data from JSON to Firebase. This will replace existing data.</p>
+        <button id="migrateBtn" class="btn btn-primary">Migrate All Data</button>
+    </div>
+    
+    <div class="mb-4">
+        <h4>Fix Missing Shlokas</h4>
+        <p>Check for missing shlokas (IDs 1-700) and add them to Firebase.</p>
+        <button id="fixShlokasBtn" class="btn btn-warning">Fix Missing Shlokas</button>
+    </div>
+    
+    <div class="mb-4">
+        <h4>Fix Chapter IDs and Migrate</h4>
+        <p>Fix the chapter IDs (all are currently 0) and upload all chapters to Firebase.</p>
+        <button id="fixChapterIdsBtn" class="btn btn-danger">Fix Chapter IDs and Migrate</button>
+    </div>
+    
+    <div class="mb-4">
+        <h4>Debug Firebase Data</h4>
+        <p>View information about the data currently stored in Firebase.</p>
+        <button id="debugBtn" class="btn btn-info">Debug Data</button>
+    </div>
+    
+    <div id="result" class="mt-3" style="display: none;">
+        <div class="alert alert-success">
+            <strong>Success!</strong> <span id="successMessage">Operation completed successfully.</span>
+        </div>
+    </div>
+    
+    <div id="error" class="mt-3" style="display: none;">
+        <div class="alert alert-danger">
+            <strong>Error!</strong> <span id="errorMessage"></span>
+        </div>
+    </div>
+    
+    <div id="debugResult" class="mt-3" style="display: none;">
+        <div class="alert alert-info">
+            <h5>Firebase Data Information:</h5>
+            <pre id="debugInfo"></pre>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Migrate all data
+            $('#migrateBtn').click(function() {
+                $.ajax({
+                    url: '@Url.Action("Migrate", "Migration")',
+                    type: 'POST',
+                    success: function(response) {
+                        if (response.success) {
+                            $('#successMessage').text('Data has been migrated successfully.');
+                            $('#result').show();
+                            $('#error').hide();
+                            $('#debugResult').hide();
+                        } else {
+                            $('#errorMessage').text(response.message);
+                            $('#error').show();
+                            $('#result').hide();
+                            $('#debugResult').hide();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#errorMessage').text('An error occurred during migration.');
+                        $('#error').show();
+                        $('#result').hide();
+                        $('#debugResult').hide();
+                    }
+                });
+            });
+            
+            // Fix missing shlokas
+            $('#fixShlokasBtn').click(function() {
+                $.ajax({
+                    url: '@Url.Action("FixMissingShlokas", "Migration")',
+                    type: 'POST',
+                    success: function(response) {
+                        if (response.success) {
+                            $('#successMessage').text('Missing shlokas have been fixed successfully.');
+                            $('#result').show();
+                            $('#error').hide();
+                            $('#debugResult').hide();
+                        } else {
+                            $('#errorMessage').text(response.message);
+                            $('#error').show();
+                            $('#result').hide();
+                            $('#debugResult').hide();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#errorMessage').text('An error occurred while fixing missing shlokas.');
+                        $('#error').show();
+                        $('#result').hide();
+                        $('#debugResult').hide();
+                    }
+                });
+            });
+            
+            // Fix chapter IDs and migrate
+            $('#fixChapterIdsBtn').click(function() {
+                $.ajax({
+                    url: '@Url.Action("FixChapterIdsAndMigrate", "Migration")',
+                    type: 'POST',
+                    success: function(response) {
+                        if (response.success) {
+                            $('#successMessage').text('Chapter IDs fixed and data migrated successfully.');
+                            $('#result').show();
+                            $('#error').hide();
+                            $('#debugResult').hide();
+                        } else {
+                            $('#errorMessage').text(response.message);
+                            $('#error').show();
+                            $('#result').hide();
+                            $('#debugResult').hide();
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        $('#errorMessage').text('An error occurred while fixing chapter IDs and migrating data.');
+                        $('#error').show();
+                        $('#result').hide();
+                        $('#debugResult').hide();
+                    }
+                });
+            });
+            
+            // Debug data
+            $('#debugBtn').click(function() {
+                $.ajax({
+                    url: '@Url.Action("Debug", "Migration")',
+                    type: 'GET',
+                    success: function(response) {
+                        $('#debugInfo').text(JSON.stringify(response, null, 2));
+                        $('#debugResult').show();
+                        $('#result').hide();
+                        $('#error').hide();
+                    },
+                    error: function(xhr, status, error) {
+                        $('#errorMessage').text('An error occurred while retrieving debug information.');
+                        $('#error').show();
+                        $('#result').hide();
+                        $('#debugResult').hide();
+                    }
+                });
+            });
+        });
+    </script>
+} 

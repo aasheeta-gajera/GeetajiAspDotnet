@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UKRV/1gqdio4eso7vMzGCrswcC+EmRZpnFv6WOJbl5s=",
+  "Hash": "yzLCB9NhG0cwp4jGs2TbD0TQWp4wpCmdB8TdAmLP054=",
   "Source": "Geetaji",
   "BasePath": "_content/Geetaji",
   "Mode": "Default",
@@ -55,6 +55,25 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\fixed_languages.json",
+      "SourceId": "Geetaji",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\",
+      "BasePath": "_content/Geetaji",
+      "RelativePath": "Data/fixed_languages.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Data\\fixed_languages.json"
+    },
+    {
       "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Data\\languages.json",
       "SourceId": "Geetaji",
       "SourceType": "Discovered",
@@ -91,6 +110,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\js\\firebase-config.js",
+      "SourceId": "Geetaji",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\",
+      "BasePath": "_content/Geetaji",
+      "RelativePath": "js/firebase-config.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\firebase-config.js"
     },
     {
       "Identity": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\js\\site.js",

@@ -1,4 +1,8 @@
-@model List<Language>
+@model List<Shloka>
+
+@{
+    ViewData["Title"] = "Show Names";
+}
 
 <div class="position-relative text-center">
     <!-- Top Image -->
@@ -25,6 +29,10 @@
     </div>
 </div>
 
+<div class="text-center mb-4">
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary">Back to All Chapters</a>
+</div>
+
 @{
     int counter = 1;
 }
@@ -35,7 +43,7 @@
             @counter
         </div>
         <div class="list-section">
-            @item.Name
+            @item.ShlokaText
         </div>
     </div>
     counter++;
