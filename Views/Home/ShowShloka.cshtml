@@ -62,16 +62,24 @@
             </a>
         </div>
         
-        <div class="chapter-navigation mt-4 mb-4 text-center">
-            <a href="@Url.Action("Index", "Home")" class="btn btn-outline-primary mx-2">All Chapters</a>
-            <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.ChapterId })" class="btn btn-outline-primary mx-2">Chapter List</a>
+        <div class="chapter-navigation">
+            <a href="@Url.Action("Index", "Home")" class="chapter-btn">
+                <i class="fas fa-home"></i> Home
+            </a>
+            <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.ChapterId })" class="chapter-btn">
+                <i class="fas fa-list"></i> Chapter
+            </a>
             @if(ViewBag.PreviousChapterId != -1)
             {
-                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.PreviousChapterId })" class="btn btn-outline-primary mx-2">Previous Chapter</a>
+                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.PreviousChapterId })" class="chapter-btn">
+                    <i class="fas fa-arrow-left"></i> Previous
+                </a>
             }
             @if(ViewBag.NextChapterId != -1)
             {
-                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.NextChapterId })" class="btn btn-outline-primary mx-2">Next Chapter</a>
+                <a href="@Url.Action("ShowNames", new { chapterId = ViewBag.NextChapterId })" class="chapter-btn">
+                    Next <i class="fas fa-arrow-right"></i>
+                </a>
             }
         </div>
     </div>
@@ -338,6 +346,36 @@
     .favorite-btn:hover i {
         transform: scale(1.1);
         transition: transform 0.2s ease;
+    }
+
+    .chapter-navigation {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+        padding: 10px;
+    }
+
+    .chapter-btn {
+        background-color: #FF8C00;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .chapter-btn:hover {
+        background-color: #E67E00;
+        color: white;
+        text-decoration: none;
+        transform: translateY(-3px);
     }
 
     @@media (min-width: 768px) {

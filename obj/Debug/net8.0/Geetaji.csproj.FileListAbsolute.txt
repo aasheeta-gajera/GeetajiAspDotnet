@@ -186,3 +186,4 @@ D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Grpc.Net.Client.dll
 D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Grpc.Net.Common.dll
 D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Linq.Async.dll
 D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\firebase-credentials.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\firebase-credentials.template.json
