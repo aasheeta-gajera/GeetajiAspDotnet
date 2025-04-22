@@ -17,7 +17,7 @@
 ## 🖼️ Preview
 
 ### 📱 Mobile App Screenshots
-![Home Page](/Assets/home.png)
+![Web Home](https://github.com/aasheeta-gajera/GeetajiAspDotnet/wwwroot/Assets/image.png)
 ![Shloka View](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/assets/fav.png)
 
 ### 💻 Web Version Preview
