@@ -21,11 +21,6 @@
 ![Shloka View](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/wwwroot/Assets/Shlokas.png)
 ![Favorite View](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/wwwroot/Assets/fav.png)
 
-### 💻 Web Version Preview
-![App Home](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/wwwroot/Assets/Apphome.jpeg)
-![App Shloka](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/wwwroot/Assets/AppShlokas.jpeg)
-![Favorite View](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/wwwroot/Assets/AppFav.jpeg)
-
 ## 🔧 Tech Stack
 
 ### 📦 Flutter App
