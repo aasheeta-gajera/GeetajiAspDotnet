@@ -17,16 +17,12 @@
 ## 🖼️ Preview
 
 ### 📱 Mobile App Screenshots
-![Mobile Home](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/assets/home.png)
+![Home Page](~/Assets/home.png)
 ![Shloka View](https://github.com/aasheeta-gajera/GeetajiAspDotnet/raw/main/assets/fav.png)
 
 ### 💻 Web Version Preview
 ![Web Home](https://github.com/<your-username>/<repo-name>/raw/main/assets/web-home.png)
 ![Web Shloka](https://github.com/<your-username>/<repo-name>/raw/main/assets/web-shloka.png)
-
-> 📌 Replace `<your-username>` and `<repo-name>` with your actual GitHub username and repository name. Make sure images are uploaded to `assets/` folder in your repo.
-
----
 
 ## 🔧 Tech Stack
 
