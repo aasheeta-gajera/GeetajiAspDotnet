@@ -187,3 +187,12 @@ D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\Grpc.Net.Common.dll
 D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\System.Linq.Async.dll
 D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\firebase-credentials.json
 D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\firebase-credentials.template.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\web.config
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\appsettings.Development.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\appsettings.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\firebase-credentials.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\firebase-credentials.template.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\Geetaji.deps.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\Geetaji.runtimeconfig.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\wwwroot\Data\fixed_languages.json
+D:\GIT\GeetajiAspDotnet\bin\Debug\net8.0\publish\wwwroot\Data\languages.json
