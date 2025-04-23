@@ -20,34 +20,34 @@ public class MigrationController : Controller
         return View();
     }
 
-    [HttpGet]
-    public async Task<IActionResult> Debug()
-    {
-        try
-        {
-            var firebaseService = new FirebaseService(HttpContext.RequestServices.GetRequiredService<IConfiguration>());
-            var languages = await firebaseService.GetAllLanguages();
-            var allShlokas = languages.SelectMany(l => l.Data).ToList();
+    // [HttpGet]
+    // public async Task<IActionResult> Debug()
+    // {
+    //     try
+    //     {
+    //         var firebaseService = new FirebaseService(HttpContext.RequestServices.GetRequiredService<IConfiguration>());
+    //         var languages = await firebaseService.GetAllLanguages();
+    //         var allShlokas = languages.SelectMany(l => l.Data).ToList();
             
-            var minId = allShlokas.Any() ? allShlokas.Min(s => s.Id) : 0;
-            var maxId = allShlokas.Any() ? allShlokas.Max(s => s.Id) : 0;
+    //         var minId = allShlokas.Any() ? allShlokas.Min(s => s.Id) : 0;
+    //         var maxId = allShlokas.Any() ? allShlokas.Max(s => s.Id) : 0;
             
-            var result = new
-            {
-                TotalLanguages = languages.Count,
-                TotalShlokas = allShlokas.Count,
-                IdRange = $"{minId} to {maxId}",
-                FirstFewIds = allShlokas.OrderBy(s => s.Id).Take(10).Select(s => s.Id).ToList(),
-                LastFewIds = allShlokas.OrderByDescending(s => s.Id).Take(10).Select(s => s.Id).ToList()
-            };
+    //         var result = new
+    //         {
+    //             TotalLanguages = languages.Count,
+    //             TotalShlokas = allShlokas.Count,
+    //             IdRange = $"{minId} to {maxId}",
+    //             FirstFewIds = allShlokas.OrderBy(s => s.Id).Take(10).Select(s => s.Id).ToList(),
+    //             LastFewIds = allShlokas.OrderByDescending(s => s.Id).Take(10).Select(s => s.Id).ToList()
+    //         };
             
-            return Json(result);
-        }
-        catch (Exception ex)
-        {
-            return Json(new { error = ex.Message, stackTrace = ex.StackTrace });
-        }
-    }
+    //         return Json(result);
+    //     }
+    //     catch (Exception ex)
+    //     {
+    //         return Json(new { error = ex.Message, stackTrace = ex.StackTrace });
+    //     }
+    // }
 
     [HttpPost]
     public async Task<IActionResult> Migrate()
