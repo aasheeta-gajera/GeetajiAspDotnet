@@ -50,21 +50,6 @@ public class MigrationController : Controller
     }
 
     [HttpPost]
-    public async Task<IActionResult> FixMissingShlokas()
-    {
-        try
-        {
-            var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "languages.json");
-            await _migrationService.VerifyAndFixMissingShlokas(jsonFilePath);
-            return Json(new { success = true, message = "Missing shlokas fixed successfully" });
-        }
-        catch (Exception ex)
-        {
-            return Json(new { success = false, message = ex.Message });
-        }
-    }
-
-    [HttpPost]
     public async Task<IActionResult> Migrate()
     {
         try
@@ -72,21 +57,6 @@ public class MigrationController : Controller
             var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "languages.json");
             await _migrationService.MigrateDataFromJson(jsonFilePath);
             return Json(new { success = true, message = "Data migrated successfully" });
-        }
-        catch (Exception ex)
-        {
-            return Json(new { success = false, message = ex.Message });
-        }
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> FixChapterIdsAndMigrate()
-    {
-        try
-        {
-            var jsonFilePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "Data", "languages.json");
-            await _migrationService.FixChapterIdsAndMigrate(jsonFilePath);
-            return Json(new { success = true, message = "Fixed chapter IDs and migrated data successfully" });
         }
         catch (Exception ex)
         {

@@ -1,8 +1,32 @@
 {
   "Files": [
     {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\AppFav.jpeg",
+      "PackagePath": "staticwebassets\\Assets\\AppFav.jpeg"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\AppShlokas.jpeg",
+      "PackagePath": "staticwebassets\\Assets\\AppShlokas.jpeg"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\Apphome.jpeg",
+      "PackagePath": "staticwebassets\\Assets\\Apphome.jpeg"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\Shlokas.png",
+      "PackagePath": "staticwebassets\\Assets\\Shlokas.png"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\fav.png",
+      "PackagePath": "staticwebassets\\Assets\\fav.png"
+    },
+    {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\geetaji.png",
       "PackagePath": "staticwebassets\\Assets\\geetaji.png"
+    },
+    {
+      "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\home.png",
+      "PackagePath": "staticwebassets\\Assets\\home.png"
     },
     {
       "Id": "D:\\GIT\\GeetajiAspDotnet\\wwwroot\\Assets\\image.png",
