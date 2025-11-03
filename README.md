@@ -42,7 +42,7 @@
 ### 📲 Flutter App
 
 ```bash
+
 git clone https://github.com/<your-username>/geetaji-app.git
 cd geetaji-app
 flutter pub get
-flutter run
